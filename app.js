@@ -1,6 +1,6 @@
-console.log("hello world");
+console.log("NOT NOT");
 
 function print(name){
-    console.log('hello'+' '+name);
+    console.log('HELLO'+' '+name);
 }
 print('kausar');
