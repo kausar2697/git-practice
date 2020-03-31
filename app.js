@@ -4,3 +4,4 @@ function print(name){
     console.log('hello'+' '+name);
 }
 print('kausar');
+
