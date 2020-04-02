@@ -8,3 +8,4 @@ console.log(parseInt(str));
 bool=false;
 
 console.log(bool.toString());
+
