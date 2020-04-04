@@ -1,5 +1,5 @@
 
-//using literal way
+//using literal way*********************
 var arr =[3,4,5,6,7]
 arr[5]=6
 
@@ -7,19 +7,19 @@ console.log(arr[0])
 
 console.log(arr.length)
 
-//using constructor way
+//using constructor way****************************
 var arr2 =Array(1,2,3)
 console.log(arr2)
 
 
-//array traverse
+//array traverse*************************
 
 for(var i=0 ;i<arr.length;i++){
     console.log(arr[i])
 }
 
 
-//insert and remove data in data
+//insert and remove data in data*********************
 
 arr.push(9) //insert 9 in last index
 
@@ -39,7 +39,7 @@ arr.splice(3,1) // remove from 3rd index
 
 
 
-//search data 
+//search data ********************************
 var find = 33
 isFound = false
 
@@ -57,7 +57,7 @@ if(!isFound){
 }
 
 
-//two dimensional array
+//two dimensional array****************************
 var arr1= [
     [21,43,31,64],
     [43,36,78,53],
@@ -72,7 +72,7 @@ for(var i=0;i<arr1.length;i++){
 }
 
 
-//array reverse
+//array reverse***********************************
 console.log(arr)
 var arr2=[]
 
@@ -93,7 +93,7 @@ for(var i=0;i<arr.length/2;i++){
 console.log(arr)
 
 
-//array methods 
+//array methods ********************************
 
 console.log(arr.join(' ')) //6 7 6 5 10 4 3 9
 

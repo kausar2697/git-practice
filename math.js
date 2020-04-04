@@ -1,4 +1,4 @@
-//uses of math object
+//uses of math object************************************
 
 console.log(Math.E);
 console.log(Math.PI);

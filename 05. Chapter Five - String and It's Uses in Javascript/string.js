@@ -1,7 +1,7 @@
 
 
 
-//scape notation
+//scape notation******************
 
 var str = 'this is a \'string\''
 console.log(str)
@@ -16,7 +16,7 @@ var str = 'this is a \\string'
 console.log(str)
 
 
-//string methods
+//string methods***********************
 
 var a = 'i am '
 var b = 'ok'

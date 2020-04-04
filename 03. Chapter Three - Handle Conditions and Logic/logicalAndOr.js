@@ -1,11 +1,11 @@
-//short hand 
+//short hand *************
 
 name= 'kausar'
 
 fullname = name || 'abc';
 
 
-//for Boolean
+//for Boolean***********
 
 var isok =false
 
