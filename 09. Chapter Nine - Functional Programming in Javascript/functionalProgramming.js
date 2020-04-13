@@ -258,3 +258,229 @@ var redMax = myReduce (redArr, function(prev,curr){
 },0)
 console.log(redMax)
 //#####################################################################
+
+//**************************find method ******************************/
+
+var findArr=[3,3,2,3,2,2,32,3,{id:232,name:'kausar'},323]
+var findResult = findArr.find(function(value){
+    return value.id == 232
+})
+console.log(findResult)  //{ id: 232, name: 'kausar' }
+
+//**************************find implementation *************************/
+
+function myFind(findArr,cb){
+    for(var i=0;i<findArr.length;i++){
+        if(cb(findArr[i])){
+            return findArr[i]
+        }
+    }
+}
+ var findResult = myFind(findArr,function(value){
+     return value==323
+ })
+console.log(findResult)
+//######################################################################
+
+
+//**************************find index ******************************/
+var findIndexArr=[4334,23,23,2,4,23,23,2,3]
+ 
+var findIndexResult=findIndexArr.findIndex(function(value){
+    return value== 4334
+})
+console.log(findIndexResult)
+
+//##############################################################
+
+//**************************sort function ******************************/
+var sortPerson = [
+    {
+        name : 'A' ,
+        age : 24
+    },
+    {
+        name : 'B',
+        age : 19
+    },
+    {
+        name : 'C',
+        age : 26
+    },
+    {
+        name : 'D',
+        age : 21
+    }
+]
+
+var sortArr  = [3,23,4,5,6,35,31,434,535,43]
+
+sortArr.sort()
+console.log(sortArr)  //23,   3, 31,  35, 4, 43, 434,  5, 535, 6 sort only the 1st character
+
+// ascending order
+sortArr.sort(function(a,b){
+    if(a>b){
+        return 1
+    }
+    else if(a<b){
+        return -1
+    }
+    else{
+        return 0
+    }
+})
+
+console.log(sortArr) //[3,  4,  5,   6,  23,31, 35, 43, 434, 535] 
+
+// descending order
+sortArr.sort(function(a,b){
+    if(a>b){
+        return -1
+    }
+    else if(a<b){
+        return 1
+    }
+    else{
+        return 0
+    }
+})
+
+console.log(sortArr)//[535, 434, 43, 35, 31,23,   6,  5,  4,  3 ]
+
+
+//sort object based of age
+
+sortPerson.sort(function(a,b){
+    if (a.age>b.age){
+        return 1
+    }
+    else if (a.age<b.age){
+        return -1
+    }
+    else{
+        return 0
+    }
+})
+
+console.log(sortPerson) 
+//OUTPUT
+/* [
+  { name: 'B', age: 19 },
+  { name: 'D', age: 21 },
+  { name: 'A', age: 24 },
+  { name: 'C', age: 26 }
+]
+*/
+
+//#####################################################################
+
+//**************************every function ******************************/
+
+var everyArr  = [3,23,4,5,6,35,31,434,535,43]
+
+var resultEvery1=everyArr.every(function(value){
+    return value%2==0
+
+})
+console.log(resultEvery1) //false
+
+//######################################################################
+
+//**************************some function ******************************/
+
+var someArr  = [3,23,4,5,6,35,31,434,535,43]
+
+var resultSome=everyArr.some(function(value){
+    return value%2==0
+
+})
+console.log(resultSome) //true   
+
+//######################################################################
+
+//************************function return******************************/
+
+function base (b){
+    return function(n){
+        var result = 1 
+        for(var i= 0;i<n;i++){
+
+            result *= b
+        }
+        return result
+
+    }
+}
+
+var base10 = base(10)
+console.log(base10(2))  //100
+
+
+//################################################################//
+
+//**************************recursive function*************** */
+
+function sayHi(n){
+    if(n==0){
+        return
+    }
+    console.log('hi, i am calling')
+    sayHi(n-1)
+}
+
+sayHi(10)
+
+//summetion
+function summetion(n){
+    if(n==1){
+        return 1
+    }
+    return n + summetion(n-1)
+}
+
+console.log(summetion(5))
+
+//factorial
+
+function fact(n){
+    if(n==1){
+        return 1
+    }
+    return n * fact(n-1)
+}
+
+console.log(fact(5)) 
+
+//##############################################################
+
+//*********************currying******************************* */
+
+function currying(a){
+    return function(b){
+        return function(c){
+            return a + b + c
+        }
+    }
+}
+
+var result = currying (5)(10)(15)
+console.log(result)    //30
+
+//#################################################################
+
+//************************composition***************************** */
+
+function print(inp){
+    console.log(inp)
+}
+
+function multiplication(n){
+    return n*5
+}
+
+function add(a,b){
+    return a+b
+}
+
+print(multiplication(add(3,5)))   //40
