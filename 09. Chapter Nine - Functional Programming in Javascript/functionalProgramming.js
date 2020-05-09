@@ -484,3 +484,16 @@ function add(a,b){
 }
 
 print(multiplication(add(3,5)))   //40
+
+//##################################################################
+
+//********************EfE***************************************** */
+//USE LOOP AND CLOSURE TOGETHER
+
+for(var i=1;i<5;i++){
+    (function(n){
+        setTimeout(function(){
+            console.log(n)
+        }, 1000*n);
+    })(i)
+}
