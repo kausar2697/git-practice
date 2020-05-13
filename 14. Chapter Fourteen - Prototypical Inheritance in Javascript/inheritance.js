@@ -33,6 +33,7 @@ s1.common()        //i am common Method
 
 //***************************** Super (For passing parameter to a parent class)************************** */
 
+/*
 function Shape(color){
  this.color= color
 } 
@@ -62,3 +63,77 @@ Square.prototype.draw = function(){    //prototype extend
 var s1= new Square(37,80)
 
 s1.common()        //i am common Method
+
+*/
+
+//##################################################################################
+
+//*********************************extend functin ***********************************/
+/*
+ function extend(parent,child){
+        child.prototype= Object.create(parent.prototype) //prototype reset
+        child.prototype.constructor= child  //constructor reset
+ }
+function Shape(color){
+        this.color= color
+       } 
+       
+       Shape.prototype.common=function(){
+               console.log('i am common Method')
+           
+       }
+       
+       function Square(width,color){
+           Shape.call(this,color)
+           this.width=width
+       
+       }
+       
+       
+      extend(Shape,Square)
+       
+       
+       
+       Square.prototype.draw = function(){    //prototype extend
+               console.log('drawing')
+       }
+       
+       
+       var s1= new Square(37,80)
+       
+       s1.common()        //i am common Method
+
+       //########################################################################
+
+       //**************************function overriding / polymorphism************************ */
+
+
+       function extend(parent, child){
+               child.prototype= Object.create(parent.prototype)
+               child.prototype.constructor=child
+       }
+       function Shape(color){
+         this.color=color
+       }
+
+       Shape.prototype.common = function(){
+               console.log("this is common function from shape proto")
+       }
+
+       function Square(width,color){
+        Shape.call(this,color)
+        this.width=width
+       }
+
+       Square.prototype.draw=function(){
+               console.log("this is draw function for square proto")
+       }
+       
+       extend(Shape,Square)
+
+
+       Square.prototype.common=function(){       //function overriding
+               console.log("this the common function from square")
+       }
+
+       var s1 = new Square(40,10)
