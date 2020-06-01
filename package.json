@@ -1,7 +1,6 @@
 {
   "name": "git-practice",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +14,6 @@
   "bugs": {
     "url": "https://github.com/kausar2697/git-practice/issues"
   },
-  "homepage": "https://github.com/kausar2697/git-practice#readme"
+  "homepage": "https://github.com/kausar2697/git-practice#readme",
+  "description": ""
 }
